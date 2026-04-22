@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Hasan\\SpecialAddonForElementor\\' => array($baseDir . '/src'),
+    'Hasan\\SpecialAddonsForElementor\\' => array($baseDir . '/src'),
 );

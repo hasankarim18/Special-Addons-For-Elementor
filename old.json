@@ -1,8 +1,8 @@
 {
-  "name": "hasan/special-addons-for-elementor",
+  "name": "hasan/special-addon-for-elementor",
   "autoload": {
     "psr-4": {
-      "Hasan\\SpecialAddonsForElementor\\": "src/"
+      "Hasan\\SpecialAddonForElementor\\": "src/"
     }
   },
   "authors": [
