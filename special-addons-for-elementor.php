@@ -21,9 +21,14 @@
 use Hasan\SpecialAddonsForElementor\Main;
 
 define('SAFE_TEXT_DOMAIN', 'special-addons-for-elementor');
+define('SAFE_URL', plugin_dir_url(__FILE__));
 
 
-require_once __DIR__ . '/vendor/autoload.php';
+if (!class_exists(Main::class) && is_readable(__DIR__) . './vendor/autoload.php') {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 
 
-Main::instance()->init();
+
+
+class_exists(Main::class) && Main::instance()->init();

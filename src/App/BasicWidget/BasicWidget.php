@@ -34,7 +34,7 @@ class BasicWidget extends Widget_Base
 
     public function get_categories(): array
     {
-        return ['basic'];
+        return ['special_addons'];
     }
 
     public function get_keywords(): array
