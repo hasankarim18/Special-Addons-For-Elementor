@@ -1,0 +1,139 @@
+/* =========================
+   SAFE PAGINATION FRACTION
+========================= */
+
+.safe_swiper_pagination_fraction {
+  width: 100%;
+}
+
+/* Swiper container */
+.safe_swiper_pagination_fraction .safe_pagination_fraction {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Remove global swiper interference */
+.safe_swiper_pagination_fraction .swiper {
+  height: auto;
+}
+
+/* Slide wrapper */
+.safe_swiper_pagination_fraction .swiper-slide {
+  box-sizing: border-box;
+  padding: 10px;
+  background: transparent;
+  display: block; /* IMPORTANT: remove flex conflict */
+}
+
+/* Slide inner */
+.safe_swiper_slide_inner {
+  position: relative;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Overlay */
+.safe_slide_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+}
+
+/* Content */
+.safe_slide_content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Title */
+.safe_slide_title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.safe_slide_desc {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 14px;
+}
+
+/* Button */
+.safe_slide_btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #ffffff;
+  color: #000;
+  font-size: 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.safe_slide_btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Navigation */
+.safe_swiper_pagination_fraction .swiper-button-next,
+.safe_swiper_pagination_fraction .swiper-button-prev {
+  color: #000;
+}
+
+/* Pagination */
+.safe_swiper_pagination_fraction .swiper-pagination {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .safe_swiper_slide_inner {
+    height: 280px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .safe_swiper_slide_inner {
+    height: 220px;
+  }
+
+  .safe_slide_content {
+    padding: 15px;
+  }
+
+  .safe_slide_title {
+    font-size: 16px;
+  }
+
+  .safe_slide_desc {
+    font-size: 13px;
+  }
+
+  .safe_slide_btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .safe_swiper_slide_inner {
+    height: 200px;
+  }
+}

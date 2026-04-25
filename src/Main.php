@@ -7,7 +7,8 @@ use Hasan\SpecialAddonsForElementor\App\BasicWidget\BasicWidget;
 use Hasan\SpecialAddonsForElementor\App\LoadAssets\LoadAssets as AppLoadAssets;
 use Hasan\SpecialAddonsForElementor\App\Singleton\Singleton;
 use Hasan\SpecialAddonsForElementor\App\LoadAssets\LoadAssets;
-
+use Hasan\SpecialAddonsForElementor\App\SwiperSliderCollections\SwiperSliderCollections;
+use Hasan\SpecialAddonsForElementor\App\Testimonial\Testimonial;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -42,6 +43,12 @@ class Main
     public function elementor_widget_init()
     {
         add_action('elementor/widgets/register', [$this, 'register_new_widgets']);
+        // registering swiper slider
+
+        $swiper_slider = new SwiperSliderCollections();
+        $swiper_slider->register();
+
+
     }
 
     public function register_new_widgets($widgets_manager)
@@ -50,5 +57,8 @@ class Main
 
 
         $widgets_manager->register(new BasicWidget());
+        $widgets_manager->register(new Testimonial());
     }
+
+
 }

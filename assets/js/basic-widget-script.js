@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  console.log("basic-widget-script.js");
+  // console.log("basic-widget-script.js");
   //   js hook
   elementorFrontend.hooks.addAction(
     "frontend/element_ready/basic_widget.default",

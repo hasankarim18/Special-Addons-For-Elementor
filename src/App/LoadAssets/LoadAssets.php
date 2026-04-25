@@ -17,6 +17,11 @@ class LoadAssets
 
         // #step 1 - enque
         add_action('elementor/frontend/before_enqueue_scripts', [$this, 'safe_enqueue_frontend_scripts']);
+
+
+        // 3
+        // register scripts -- contional (only register not enqueing)
+        add_action('wp_enqueue_scripts', [$this, 'register_widget_styles']);
     }
 
     // step 1.a
@@ -26,6 +31,11 @@ class LoadAssets
             'basic-widget-script',
             SAFE_URL . 'assets/js/basic-widget-script.js'
         );
+
+        // 
+
+
+
     }
 
 
@@ -33,6 +43,13 @@ class LoadAssets
     public function safe_enqueue_frontend_scripts()
     {
         wp_enqueue_script('basic-widget-script');
+    }
+
+    // 3
+
+    public function register_widget_styles()
+    {
+        wp_register_style('sa_fe_testimonial_css', SAFE_URL . 'assets/css/testimonial.css');
     }
 
 }
